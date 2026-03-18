@@ -1,4 +1,8 @@
 #include <iostream>
+// climits header file is used to define the characteristics of fundamental data types, such as their minimum and maximum values, and the number of bits used to represent them. It provides a set of constants that can be used to determine the limits of various data types in C++. For example, it defines constants like INT_MAX and INT_MIN for the maximum and minimum values of an int, and SHRT_MAX and SHRT_MIN for the maximum and minimum values of a short. By including the <climits> header file, we can access these constants and use them in our programs to ensure that we are working within the limits of the data types we are using.
+#include <climits>
+// cfloat header file is used to define the characteristics of floating-point data types, such as their minimum and maximum values, and the number of digits of precision they can represent. It provides a set of constants that can be used to determine the limits of various floating-point data types in C++. For example, it defines constants like FLT_MAX and FLT_MIN for the maximum and minimum values of a float, and DBL_MAX and DBL_MIN for the maximum and minimum values of a double. By including the <cfloat> header file, we can access these constants and use them in our programs to ensure that we are working within the limits of the floating-point data types we are using.
+#include <cfloat>
 
 // import pi from contants
 #include "constants/main.cpp"
@@ -126,6 +130,54 @@ int main() {
     short product {value1 * value2};
 
     cout << "The product of " << value1 << " and " << value2 << " is: " << product << endl;
+    
+    cout << "Documentation of sizeof operator: " << endl;
+    cout << "The sizeof operator in C++ is used to determine the size, in bytes, of a data type or a variable. It can be used to find out how much memory a particular data type or variable occupies. The syntax for using the sizeof operator is as follows: sizeof(type) or sizeof(variable). When used with a data type, it returns the size of that data type in bytes. When used with a variable, it returns the size of the variable's data type in bytes. The sizeof operator is evaluated at compile time, which means that it does not incur any runtime overhead. It is commonly used in situations where we need to allocate memory dynamically or when we want to determine the size of an array or a structure. For example, if we want to allocate memory for an array of integers, we can use the sizeof operator to calculate the total size of the array by multiplying the size of an integer by the number of elements in the array. Overall, the sizeof operator is a useful tool in C++ for determining the size of data types and variables, and it can help us write more efficient and memory-conscious code" << endl;
+    cout << "The size of short is: " << sizeof(short) << " bytes." << endl;
+    cout << "The size of int is: " << sizeof(int) << " bytes." << endl;
+    cout << "The size of long is: " << sizeof(long) << " bytes." << endl;
+    cout << "The size of long long is: " << sizeof(long long) << " bytes." << endl;
+    cout << "The size of float is: " << sizeof(float) << " bytes." << endl;
+    cout << "The size of double is: " << sizeof(double) << " bytes." << endl;
+    cout << "The size of long double is: " << sizeof(long double) << " bytes." << endl;
+    cout << "The size of bool is: " << sizeof(bool) << " bytes." << endl;
+
+    /**
+     * use of climits header file. In this part, we are using the constants defined in the <climits> header file to determine the limits of various data types in C++. We are printing the maximum and minimum values for int, short, long, long long, float, double, long double, and bool. This part demonstrates how to use the constants defined in the <climits> header file to ensure that we are working within the limits of the data types we are using in our programs.
+     * For example, we can see that the maximum value for an int is 2147483647, and the minimum value is -2147483648. This means that if we try to store a value that exceeds these limits in an int variable, we will get an overflow or underflow, which can lead to unexpected behavior in our program. By using the constants defined in the <climits> header file, we can avoid such issues and write more robust and reliable code.
+     * Overall, the <climits> header file is an important tool for C++ programmers to ensure that they are working within the limits of the data types they are using, and it can help them write more efficient and error-free code.
+     */
+    
+     cout << "Climits header file constants: " << endl;
+     cout << "The maximum value for int is: " << INT_MAX << endl;
+     cout << "The minimum value for int is: " << INT_MIN << endl;
+     cout << "The maximum value for short is: " << SHRT_MAX << endl;
+     cout << "The minimum value for short is: " << SHRT_MIN << endl;
+     cout << "The maximum value for long is: " << LONG_MAX << endl;
+     cout << "The minimum value for long is: " << LONG_MIN << endl;
+     cout << "The maximum value for long long is: " << LLONG_MAX << endl;
+     cout << "The minimum value for long long is: " << LLONG_MIN << endl;
+     cout << "The maximum value for float is: " << FLT_MAX << endl;
+     cout << "The minimum value for float is: " << FLT_MIN << endl;
+     cout << "The maximum value for double is: " << DBL_MAX << endl;
+     cout << "The minimum value for double is: " << DBL_MIN << endl;
+     cout << "The maximum value for long double is: " << LDBL_MAX << endl;
+     cout << "The minimum value for long double is: " << LDBL_MIN << endl;
+     cout << "The maximum value for bool is: " << true << endl;
+     cout << "The minimum value for bool is: " << false << endl;
+
+     /**
+      * sizeof of sample variables. In this part, we are using the sizeof operator to determine the size of various data types in C++. We are printing the size of short, int, long, long long, float, double, long double, and bool. This part demonstrates how to use the sizeof operator to determine the size of data types in C++, which can help us write more efficient and memory-conscious code.
+      * fifteenth part. In this part, we are declaring a variable "age" of type int, and we are initializing it with the value 35. We are then using the sizeof operator to determine the size of the "age" variable in bytes, and we are printing the result to the console. This part demonstrates how to use the sizeof operator to determine the size of a variable in C++, which can help us understand how much memory a particular variable is occupying in our program.
+      */
+    cout << "The sample size of variables: " << endl;
+    int age {35};
+    cout << "The size of age variable is: " << sizeof(age) << " bytes." << endl;
+    cout << "Alternative use of sizeof operator: " << sizeof age << " bytes." << endl;
+
+    double wage { 123456.78};
+    cout << "The size of wage variable is: " << sizeof(wage) << " bytes." << endl;
+    cout << "Alternative use of sizeof operator: " << sizeof wage << " bytes." << endl;
     
     return 0;
 }
